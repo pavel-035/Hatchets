@@ -1,0 +1,43 @@
+$textColor: #2A3240;
+$nameColor: #666666;
+$uniqueColor: #212EB4;
+
+/*
+  FONT WEIGHT TABLE
+  100: Thin (Hairline)
+  200: Extra Light (Ultra Light)
+  300: Light
+  400: Regular
+  500: Medium
+  600: Semi Bold (Demi Bold)
+  700: Bold
+  800: Extra Bold (Ultra Bold)
+  900: Black (Heavy)
+ */
+
+@mixin font($color, $size, $height, $weight, $family) {
+  font-size: $size;
+  color: $color;
+  line-height: $height;
+  font-weight: $weight;
+  font-family: $family;
+}
+
+.hatchets-img_box {
+  font-size: 0;
+  img {
+    width: 100%;
+  }
+}
+
+.hatchets-section_box {
+  max-width: 1678px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 30px;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
