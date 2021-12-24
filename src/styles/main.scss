@@ -1,6 +1,9 @@
-$textColor: #2A3240;
-$nameColor: #666666;
-$uniqueColor: #212EB4;
+$textColor: #fff;
+$nameColor: #fff;
+$uniqueColor: #ECBF24;
+
+$diamondSize: 4.07px;
+$diamondPosition: -2.5px;
 
 /*
   FONT WEIGHT TABLE
@@ -14,6 +17,21 @@ $uniqueColor: #212EB4;
   800: Extra Bold (Ultra Bold)
   900: Black (Heavy)
  */
+
+@font-face {
+  font-family: "Staatliches";
+  src: url("../assets/fonts/Staatliches/Staatliches-Regular.ttf") format("opentype")
+}
+
+@font-face {
+  font-family: "Ubuntu";
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Regular.ttf") format("opentype")
+}
+
+@font-face {
+  font-family: "Ubuntu Medium";
+  src: url("../assets/fonts/Ubuntu/Ubuntu-Medium.ttf") format("opentype")
+}
 
 @mixin font($color, $size, $height, $weight, $family) {
   font-size: $size;
@@ -31,13 +49,951 @@ $uniqueColor: #212EB4;
 }
 
 .hatchets-section_box {
-  max-width: 1678px;
+  max-width: 1480px;
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
   box-sizing: border-box;
+
+  &_shorter {
+    max-width: 1296px;
+  }
+}
+
+.hatchets-wrapper {
+  background: #000;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.hatchets-heading {
+  @include font($nameColor, 24px, 28px, 500, "Ubuntu Medium");
+  text-transform: uppercase;
+
+  margin: 0;
+
+  &_dot {
+    padding-left: 20px;
+
+    position: relative;
+    &::before {
+      content: "";
+
+      background: $uniqueColor;
+      width: 10px;
+      height: 10px;
+
+      border-radius: 50px;
+
+      position: absolute;
+      left: 0;
+      top: 9px;
+    }
+  }
+}
+
+.hatchets-diamond {
+  border-style: solid;
+  border-color: $uniqueColor;
+  border-width: 0;
+
+  position: relative;
+
+  &::before {
+    content: "";
+
+    width: $diamondSize;
+    height: $diamondSize;
+    background: $uniqueColor;
+    transform: rotate(45deg);
+
+    position: absolute;
+    top: 0;
+  }
+
+  &::after {
+    content: "";
+
+    width: $diamondSize;
+    height: $diamondSize;
+    background: $uniqueColor;
+    transform: rotate(45deg);
+
+    position: absolute;
+    bottom: 0;
+  }
+}
+
+.hatchets-checkmark {
+  position: relative;
+
+  padding-left: 22px;
+
+  &::before {
+    content: "";
+
+    background: url("../assets/images/svg/checkmark.svg") no-repeat 50% 50%;
+    width: 22px;
+    height: 22px;
+
+    position: absolute;
+    top: 11px;
+    left: -10px;
+    transform: translateY(-50%);
+  }
+}
+
+.hatchets-list {
+  margin: 0;
+  padding: 0 0 0 20px;
+  border-left-width: 1px;
+
+  &::before {
+    left: $diamondPosition;
+  }
+  &::after {
+    left: $diamondPosition;
+  }
+
+  &__item {
+    margin: 30px 0;
+    list-style: none;
+  }
+}
+
+.hatchets-text {
+  @include font($textColor, 18px, 31px, 400, "Ubuntu");
+  margin: 0;
+}
+
+.hatchets-button {
+  outline: none;
+  background: transparent;
+  border: 1px solid $uniqueColor;
+  border-radius: 50px;
+  transition: 0.5s;
+
+  padding: 22px 90px;
+  &__text {
+    @include font(#fff, 18px, 30px, 500, "Ubuntu Medium");
+  }
+  &:hover {
+    background: $uniqueColor;
+    box-shadow: 0px 20px 35px rgba(236, 191, 36, 0.2);
+    transition: 0.7s;
+  }
+}
+
+button {
+  cursor: pointer;
+  border: none;
 }
 
 body {
   margin: 0;
+}
+
+.hatchets-header {
+  background: url("../assets/images/png/header-background.png") no-repeat 47% 0%;
+  padding: 722px 0 25px;
+  &__content {
+    background: url("../assets/images/svg/champ-throw.svg") repeat-x 119% 100%;
+    position: relative;
+    z-index: 5;
+  }
+  &__man {
+    width: 1408px;
+
+    position: absolute;
+    top: 100%;
+    left: -26%;
+    transform: translateY(-97%);
+    z-index: 10;
+
+    target-position: inherit;
+  }
+  &__projector {
+    width: 1287px;
+
+    position: absolute;
+    top: 100%;
+    right: -11%;
+    transform: translateY(-100%);
+    z-index: 0;
+  }
+  &__box {
+    position: relative;
+    z-index: 15;
+  }
+  &__title {
+    @include font($nameColor, 144px, 178px, 400, "Staatliches");
+    margin: 0;
+  }
+  &__subtitle {
+    @include font(#000, 24px, 27px, 400, "Ubuntu");
+
+    display: inline-block;
+
+    margin: 0;
+    padding: 10px;
+
+    background: $uniqueColor;
+  }
+}
+
+.hatchets-about {
+  padding: 44px 0 9px;
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    position: relative;
+    &::before {
+      content: "";
+
+      background: url("../assets/images/svg/circle-dark.svg") no-repeat 50% 50%/cover;
+      width: 223px;
+      height: 223px;
+
+      position: absolute;
+      bottom: 34%;
+      left: -22%;
+    }
+  }
+
+  //&__data {
+  //  padding-top: 82px;
+  //}
+
+  &__description {
+    max-width: 710px;
+    width: 100%;
+    margin: 15px 0 60px;
+  }
+
+  &__item {
+    &:first-child {
+      margin-top: 15px;
+    }
+  }
+  &__title {
+    @include font($uniqueColor, 24px, 28px, 500, "Ubuntu Medium");
+    margin: 0 0 10px;
+  }
+  &__text {
+    line-height: 21px;
+  }
+
+  &__image {
+    transform: translate(8%, 2%);
+    max-width: 691px;
+    width: 100%;
+  }
+}
+
+.hatchets-purpose {
+  padding: 126px 0 0;
+  background: url("../assets/images/png/purpose-background.png") no-repeat 50% 50%/cover;
+
+  &__heading {
+    margin-bottom: 35px;
+  }
+  &__text {
+    line-height: 21px;
+  }
+  &__contain {
+    background: url("../assets/images/svg/champ-throw.svg") repeat-x 228% 100%;
+    min-height: 224px;
+    margin-top: 174px;
+
+    position: relative;
+    z-index: 5;
+  }
+  &__phone {
+    max-width: 481px;
+    width: 100%;
+
+    position: absolute;
+    top: -37%;
+    left: 0;
+    z-index: 10;
+  }
+  &__hatchets {
+    max-width: 1633px;
+    width: 100%;
+
+    position: absolute;
+    top: -100%;
+    right: -16%;
+    z-index: 10;
+    transform: translateY(-39%);
+  }
+}
+
+.hatchets-steps {
+  position: relative;
+  z-index: 10;
+
+  padding: 100px 0 95px;
+
+  &__box {
+    max-width: 1427px;
+    width: 100%;
+
+  }
+  &__heading {
+    max-width: 1190px;
+    width: 100%;
+    margin: 0 auto 112px;
+  }
+
+  &__dots {
+    max-width: 975px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto 80px;
+  }
+  &__dot {
+    background: transparent;
+    padding: 10px 48px;
+
+    @include font($textColor, 24px, 27px, 500, "Ubuntu Medium");
+    &_active {
+      color: $uniqueColor;
+      border-bottom-width: 1px;
+      &::after {
+        top: auto;
+        bottom: $diamondPosition;
+        right: $diamondPosition;
+      }
+      &::before {
+        top: auto;
+        bottom: $diamondPosition;
+        left: $diamondPosition;
+      }
+    }
+  }
+
+  &__view {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__button {
+    background: transparent;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+
+    path {
+      fill: #464646;
+      transition: 0.5s;
+    }
+    &:hover {
+      path {
+        fill: #fff;
+        transition: 0.7s;
+      }
+    }
+    &_active {
+      path {
+        fill: #fff;
+      }
+    }
+  }
+
+  &__slider {
+    display: flex;
+    justify-content: space-between;
+    max-width: 995px;
+    width: 100%;
+  }
+  &__slide {
+    max-width: 300px;
+    filter: drop-shadow(0px 15px 50px rgba(236, 191, 36, 0.25));
+    border-radius: 10px;
+  }
+  &__halo {
+    max-width: 1180px;
+    width: 100%;
+    margin: 99px auto 0;
+  }
+}
+
+.hatchets-art {
+  padding: 137px 0 73px;
+  &__heading {
+    margin-bottom: 80px;
+  }
+
+  &__section {
+    margin-top: 25px;
+    &_premium {
+      max-width: 1401px;
+      width: 100%;
+      margin: 25px 0 0 auto;
+      text-align: right;
+      .hatchets-art__view_circle {
+        &::before {
+          content: "";
+
+          background: url("../assets/images/svg/circle-dark.svg") no-repeat 50% 50%/cover;
+          width: 415px;
+          height: 415px;
+
+          position: absolute;
+          bottom: -20%;
+          right: -25%;
+          left: auto;
+          z-index: -1;
+        }
+      }
+
+      .hatchets-art__description {
+        margin: 0 30px 0 0;
+        text-align: left;
+      }
+
+      .hatchets-art__gallery {
+        max-width: 815px;
+
+        padding: 0 0 0 6px;
+        border-right-width: 0;
+        border-left-width: 1px;
+
+        &:before {
+          top: $diamondPosition;
+          right: auto;
+          left: $diamondPosition;
+        }
+        &:after {
+          right: auto;
+          bottom: $diamondPosition;
+          left: $diamondPosition;
+        }
+      }
+
+      .hatchets-art__image {
+        margin: 5px 0 5px 25px;
+      }
+    }
+  }
+
+  &__title {
+    @include font($uniqueColor, 24px, 27px, 500, "Ubuntu Medium");
+
+    display: inline-block;
+    margin: 0 0 55px;
+
+    position: relative;
+    z-index: 10;
+    &_halo {
+      &::after {
+        content: "";
+
+        background: url("../assets/images/svg/art-halo.svg") no-repeat 50% 50%;
+        width: 508px;
+        height: 779px;
+
+        position: absolute;
+        top: 40%;
+        right: 50%;
+        transform: translateX(50%);
+      }
+    }
+  }
+
+  &__view {
+    display: flex;
+    align-items: center;
+
+    position: relative;
+    z-index: 0;
+    &_circle {
+      &::before {
+        content: "";
+
+        background: url("../assets/images/svg/circle.svg") no-repeat 50% 50%/cover;
+        width: 415px;
+        height: 415px;
+
+        position: absolute;
+        bottom: 3%;
+        left: -23%;
+        z-index: -1;
+      }
+    }
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-shrink: 0;
+
+    max-width: 978px;
+    width: 100%;
+
+    padding-right: 6px;
+    border-right-width: 1px;
+    &:before {
+      top: $diamondPosition;
+      right: $diamondPosition;
+    }
+    &:after {
+      right: $diamondPosition;
+      bottom: $diamondPosition;
+    }
+  }
+  &__image {
+    max-width: 138px;
+    width: 100%;
+    margin: 5px 25px 5px 0;
+  }
+
+  &__description {
+    margin: 0 0 0 30px;
+  }
+}
+
+.hatchets-animate {
+  padding: 71px 0 93px;
+
+  &__box {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      background: url("../assets/images/png/animate-section/blot.png") no-repeat 50% 50%;
+      width: 725px;
+      height: 730px;
+
+      position: absolute;
+      bottom: -30%;
+      right: -24%;
+    }
+  }
+  &__description {
+    max-width: 650px;
+    width: 100%;
+
+    position: relative;
+    z-index: 10;
+    &::before {
+      content: "";
+
+      background: url("../assets/images/png/animate-section/blot-shadow.png") no-repeat 50% 50%;
+      width: 1318px;
+      height: 1317px;
+
+      position: absolute;
+      top: -100%;
+      left: -100%;
+      transform: translate(-20%, -19%);
+      z-index: -1;
+    }
+  }
+  &__text {
+    margin-top: 30px;
+  }
+
+  &__gallery {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+
+    position: relative;
+    z-index: 0;
+  }
+  &__gif {
+    max-width: 387px;
+    &_hen {
+      transform: translate(-13%, 13%);
+    }
+    &_woman {
+      transform: translate(-5%, -8%);
+    }
+    &_knight {
+      transform: translate(6%, -9%);
+    }
+    &_hero {
+      transform: translate(16%, 14%);
+    }
+    &_pumpkin {
+      transform: translate(21%, -8%);
+    }
+  }
+}
+
+.hatchets-project {
+  padding-top: 80px;
+  position: relative;
+  z-index: 10;
+}
+
+.hatchets-mobile {
+  padding: 1px 0 54px;
+  &__title {
+    color: $uniqueColor;
+    text-transform: inherit;
+    margin: 86px 0 26px;
+    padding-left: 37px;
+    &::before {
+      width: 7px;
+      height: 7px;
+
+      left: 13px;
+      top: 10px;
+    }
+  }
+  &__text {
+    max-width: 419px;
+  }
+
+  &__cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+
+    //background: url("../assets/images/png/screens-background.png") no-repeat 50% 50%;
+  }
+  &__card {
+    text-align: center;
+    margin: 41px 290px 65px 0;
+    max-width: 519px;
+
+    &:nth-child(3n) {
+      margin-right: 0;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  &__name {
+    line-height: 21px;
+
+    display: inline-block;
+    margin-bottom: 26px;
+
+    text-align: left;
+
+    position: relative;
+  }
+  &__screen {
+    display: inline-block;
+    max-width: 170px;
+
+    filter: drop-shadow(0px 35px 25px rgba(0, 0, 0, 0.25));
+
+    position: relative;
+    z-index: 0;
+    &::before {
+      content: "";
+
+      background: url("../assets/images/png/screen-halo.png") no-repeat 50% 50%;
+      width: 462px;
+      height: 446px;
+
+      position: absolute;
+      bottom: -45%;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: -1;
+    }
+  }
+}
+
+.hatchets-admin {
+  padding: 0 0 44px;
+  &__title {
+    color: $uniqueColor;
+    text-transform: inherit;
+    margin: 0 0 26px;
+    padding-left: 37px;
+    &::before {
+      width: 7px;
+      height: 7px;
+
+      left: 13px;
+      top: 10px;
+    }
+  }
+  &__text {
+    max-width: 421px;
+    width: 100%;
+  }
+  &__list {
+    margin: 72px 0 116px;
+  }
+  &__item {
+    line-height: 21px;
+
+    display: inline-block;
+    margin: 0 53px 0 0;
+    padding-left: 25px;
+
+    text-align: left;
+  }
+  &__admin {
+    min-height: 553px;
+    width: 100%;
+    position: relative;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    &_statistic {
+      max-width: 582px;
+      left: -6.5%;
+    }
+    &_data {
+      max-width: 598px;
+      top: 12%;
+      left: 28.5%;
+    }
+    &_laptop {
+      max-width: 720px;
+      top: -65%;
+      right: -17%;
+    }
+  }
+}
+
+.hatchets-projector {
+  padding: 57px 0 69px;
+
+  &__heading {
+    color: $uniqueColor;
+    text-transform: inherit;
+
+    margin-bottom: 24px;
+
+    position: relative;
+    &::before {
+      content: "";
+
+      background: url("../assets/images/png/sphere.png") no-repeat 50% 50%/cover;
+      width: 100px;
+      height: 100px;
+
+      border-radius: 50px;
+
+      position: absolute;
+      left: -9.5%;
+      top: -132%;
+    }
+  }
+  &__text {
+    max-width: 440px;
+    width: 100%;
+  }
+
+  &__data {
+    display: flex;
+    justify-content: space-between;
+
+    margin-top: 95px;
+  }
+  &__image {
+    max-width: 850px;
+    width: 100%;
+
+    position: relative;
+    &::after {
+      content: "";
+
+      background: url("../assets/images/png/forester-two.png") no-repeat 50% 50%;
+      width: 460px;
+      height: 424px;
+
+      position: absolute;
+      bottom: 0;
+      left: -9%;
+    }
+  }
+
+  &__about {
+    max-width: 489px;
+    width: 100%;
+    padding-top: 38px;
+
+    position: relative;
+    &::after {
+      content: "";
+
+      background: url("../assets/images/png/projector-two.png") no-repeat 50% 50%;
+      width: 756px;
+      height: 414px;
+
+      position: absolute;
+      right: 29%;
+      bottom: 5%;
+    }
+  }
+  &__title {
+    line-height: 21px;
+    color: $uniqueColor;
+
+    display: inline-block;
+    margin-bottom: 19px;
+    padding-left: 0;
+
+    text-align: left;
+    text-transform: inherit;
+  }
+  .hatchets-checkmark::before {
+    left: -34px;
+  }
+}
+
+.hatchets-look {
+  padding: 68px 0 74px;
+  &__heading {
+    text-transform: inherit;
+    color: $uniqueColor;
+    padding-left: 35px;
+    &::before {
+      top: 13px;
+      left: 2px;
+    }
+  }
+  &__field {
+    display: flex;
+
+    margin-top: 75px;
+  }
+  &__media {
+    width: 424px;
+    height: 555px;
+
+    border: 1px dashed rgba(236, 191, 36, 0.5);
+  }
+  &__video {
+    margin-right: 54px;
+  }
+}
+
+.hatchets-technologies {
+  padding: 74px 0 97px;
+  &__programs {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    max-width: 1090px;
+    width: 100%;
+  }
+  &__image {
+    width: calc(100% / 3);
+    text-align: center;
+
+    margin: 50px 0;
+  }
+}
+
+.hatchets-teem {
+  padding: 97px 0 85px;
+  &__gallery {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &__card {
+    text-align: center;
+    margin: 100px 120px 0 0;
+  }
+  &__image {
+    max-width: 146px;
+    width: 100%;
+    display: inline-block;
+  }
+  &__name {
+    @include font(#fff, 24px, 28px, 500, "Ubuntu Medium");
+    margin: 25px 0 20px;
+  }
+  &__position {
+    @include font(#fff, 18px, 20px, 400, "Ubuntu");
+    margin: 25px 0 20px;
+  }
+}
+
+.hatchets-reviews {
+  padding: 85px 0 54px;
+
+  background: url("../assets/images/svg/champ-throw.svg") repeat-x 50% 50%;
+  position: relative;
+  &::after {
+    content: "";
+
+    background: url("../assets/images/png/purpose-hatchets.png") no-repeat 50% 50%/cover;
+    width: 893px;
+    height: 893px;
+
+    position: absolute;
+    top: -95%;
+    right: -13%;
+  }
+  &__text {
+    max-width: 1013px;
+    width: 100%;
+    margin-top: 15px;
+  }
+}
+
+.hatchets-footer {
+  padding: 192px 0 201px;
+  text-align: center;
+
+  position: relative;
+  z-index: 0;
+  &::after {
+    content: "";
+
+    background: url("../assets/images/svg/art-halo.svg") no-repeat 50% 50%/cover;
+    width: 615px;
+    height: 800px;
+
+    position: absolute;
+    top: 0;
+    right: 50%;
+    transform: translateX(50%);
+
+    z-index: -1;
+  }
+  &__heading {
+    display: inline-block;
+  }
+
+  &__text {
+    max-width: 838px;
+    margin: 15px auto 30px;
+  }
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    max-width: 605px;
+    margin: 0 auto;
+  }
+  &__icon {
+    display: inline-block;
+    vertical-align: middle;
+    width: 46px;
+    margin-right: 21px;
+  }
+  &__data {
+    @include font(#fff, 24px, 41px, 500, "Ubuntu Medium");
+
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__button {
+    margin-top: 50px;
+  }
 }

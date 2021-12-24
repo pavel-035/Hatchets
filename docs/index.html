@@ -1,0 +1,776 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Hatchets</title>
+
+    <link rel="stylesheet" href="./src/styles/main.css">
+</head>
+<body>
+    <div class="hatchets-wrapper">
+        <header class="hatchets-header">
+            <div class="hatchets-header__content">
+                <div class="hatchets-header__man hatchets-img_box">
+                    <img src="./src/assets/images/png/forester.png" alt="forester">
+                </div>
+                <div class="hatchets-header__projector hatchets-img_box">
+                    <img src="./src/assets/images/png/projector.png" alt="forester">
+                </div>
+                <div class="hatchets-header__box hatchets-section_box">
+                    <h1 class="hatchets-header__title">
+                        Champ Throw
+                    </h1>
+                    <p class="hatchets-header__subtitle">
+                        Интерактивная игра с проекцией на стену
+                    </p>
+                </div>
+            </div>
+        </header>
+        <main>
+            <section class="hatchets-about">
+                <div class="hatchets-about__box hatchets-section_box">
+                    <div class="hatchets-about__data">
+                        <h2 class="hatchets-about__heading hatchets-heading hatchets-heading_dot">
+                            О проекте
+                        </h2>
+                        <p class="hatchets-about__description hatchets-text">
+                            Особенность проекта заключалась в том, что необходимо было отслеживать попадание топора в цель, которая проецировалась на стену. Отслеживание мы реализовали с помощью лазера Lidar нам пришлось самим делать библиотеку для того, чтобы мы смогли интегрировать lidar в проект.
+                        </p>
+                        <h2 class="hatchets-about__heading hatchets-heading hatchets-heading_dot">
+                            Проект в цифрах
+                        </h2>
+                        <ul class="hatchets-about__list hatchets-list hatchets-diamond">
+                            <li class="hatchets-about__item hatchets-list__item">
+                                <div class="hatchets-about__title">1 год</div>
+                                <span class="hatchets-about__text hatchets-text">
+                                Время на разработку
+                            </span>
+                            </li>
+                            <li class="hatchets-about__item hatchets-list__item">
+                                <div class="hatchets-about__title">3 000 000 рублей</div>
+                                <span class="hatchets-about__text hatchets-text">
+                                Бюджет проекта
+                            </span>
+                            </li>
+                            <li class="hatchets-about__item hatchets-list__item">
+                                <div class="hatchets-about__title">2021 год</div>
+                                <span class="hatchets-about__text hatchets-text">
+                                Год разработки
+                            </span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="hatchets-about__image hatchets-img_box">
+                        <img src="./src/assets/images/png/about.png" alt="example">
+                    </div>
+                </div>
+            </section>
+            <section class="hatchets-purpose">
+                <div class="hatchets-purpose__box hatchets-section_box">
+                    <h2 class="hatchets-purpose__heading hatchets-heading hatchets-heading_dot">
+                        КАКАЯ ЦЕЛЬ ПРОЕКТА
+                    </h2>
+                    <ul class="hatchets-purpose__list hatchets-list hatchets-diamond">
+                        <li class="hatchets-purpose__item hatchets-list__item">
+                            <span class="hatchets-purpose__text hatchets-text">
+                                Создаем качественное техническое задание
+                            </span>
+                        </li>
+                        <li class="hatchets-purpose__item hatchets-list__item">
+                            <span class="hatchets-purpose__text hatchets-text">
+                                Прототипируем проект
+                            </span>
+                        </li>
+                        <li class="hatchets-purpose__item hatchets-list__item">
+                            <span class="hatchets-purpose__text hatchets-text">
+                                Создаем чистовой дизайн и  анимации
+                            </span>
+                        </li>
+                        <li class="hatchets-purpose__item hatchets-list__item">
+                            <span class="hatchets-purpose__text hatchets-text">
+                                Программируем и тестируем проект
+                            </span>
+                        </li>
+                        <li class="hatchets-purpose__item hatchets-list__item">
+                            <span class="hatchets-purpose__text hatchets-text">
+                                Сдаем готовый проект заказчику
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hatchets-purpose__contain">
+                    <div class="hatchets-purpose__phone hatchets-img_box">
+                        <img src="./src/assets/images/png/purpose-phone.png" alt="phone">
+                    </div>
+                    <div class="hatchets-purpose__hatchets hatchets-img_box">
+                        <img src="./src/assets/images/png/purpose-hatchets.png" alt="hatchets">
+                    </div>
+                </div>
+            </section>
+            <section class="hatchets-steps">
+                <div class="hatchets-steps__box hatchets-section_box">
+                    <h2 class="hatchets-steps__heading hatchets-heading hatchets-heading_dot">
+                        От прототипа к чистовому дизайну
+                    </h2>
+                    <div>
+                        <div class="hatchets-steps__dots">
+                            <button class="hatchets-steps__dot hatchets-steps__dot_active hatchets-diamond">
+                                Mobile APP
+                            </button>
+                            <button class="hatchets-steps__dot">
+                                Game Manager
+                            </button>
+                            <button class="hatchets-steps__dot">
+                                Projector
+                            </button>
+                        </div>
+
+                        <div class="hatchets-steps__view">
+                            <button class="hatchets-steps__button hatchets-prew">
+                                <svg width="40" height="64" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M32 0L40 8L16 32L40 56L32 64L0 32L32 0Z"/>
+                                </svg>
+                            </button>
+                            <div class="hatchets-steps__slider">
+                                <div class="hatchets-steps__slide hatchets-img_box">
+                                    <img src="./src/assets/images/png/slider/slide1.png" alt="slide">
+                                </div>
+                                <div class="hatchets-steps__slide hatchets-img_box">
+                                    <img src="./src/assets/images/png/slider/slide2.png" alt="slide">
+                                </div>
+                                <div class="hatchets-steps__slide hatchets-img_box">
+                                    <img src="./src/assets/images/png/slider/slide3.png" alt="slide">
+                                </div>
+                            </div>
+                            <button class="hatchets-steps__button hatchets-prew">
+                                <svg width="40" height="64" viewBox="0 0 40 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.00002 0L2.24113e-05 8L24 32L2.24113e-05 56L8.00002 64L40 32L8.00002 0Z"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <div class="hatchets-steps__halo hatchets-img_box">
+                            <img src="./src/assets/images/png/slider-halo.png" alt="halo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hatchets-art">
+                <div class="hatchets-art__box hatchets-section_box">
+                    <h2 class="hatchets-art__heading hatchets-heading hatchets-heading_dot">
+                        Художественная часть проекта
+                    </h2>
+
+                    <section class="hatchets-art__section">
+                        <h2 class="hatchets-art__title hatchets-art__title_halo">
+                            Аватары
+                        </h2>
+                        <div class="hatchets-art__view">
+                            <div class="hatchets-art__gallery hatchets-diamond">
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image1.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image2.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image3.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image4.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image5.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image6.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image7.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image8.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image9.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image10.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image11.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image12.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image13.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image14.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image15.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image16.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image17.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/image18.png" alt="avatar">
+                                </div>
+                            </div>
+                            <p class="hatchets-art__description hatchets-text">
+                                Какое-то описание, пример текста в две строчки, какое-то описание, пример текста в две строчки
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="hatchets-art__section hatchets-art__section_premium">
+                        <h2 class="hatchets-art__title">
+                            Премиум аватары
+                        </h2>
+
+                        <div class="hatchets-art__view hatchets-art__view_circle">
+                            <p class="hatchets-art__description hatchets-text">
+                                Какое-то описание, пример текста в две строчки, какое-то описание, пример текста в две строчки
+                            </p>
+
+                            <div class="hatchets-art__gallery hatchets-art__gallery hatchets-diamond">
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image1.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image2.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image3.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image4.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image5.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image6.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image7.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image8.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image9.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/avatars/premium/image10.png" alt="avatar">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+
+                    <section class="hatchets-art__section">
+                        <h2 class="hatchets-art__title">
+                            Рамки
+                        </h2>
+
+                        <div class="hatchets-art__view hatchets-art__view_circle">
+                            <div class="hatchets-art__gallery hatchets-diamond">
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image1.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image2.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image3.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image4.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image5.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image6.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image7.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image8.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image9.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image10.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image11.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image12.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image13.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image14.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image15.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image16.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image17.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/image18.png" alt="avatar">
+                                </div>
+                            </div>
+
+                            <p class="hatchets-art__description hatchets-text">
+                                Какое-то описание, пример текста в две строчки, какое-то описание, пример текста в две строчки
+                            </p>
+                        </div>
+                    </section>
+
+                    <section class="hatchets-art__section hatchets-art__section_premium">
+                        <h2 class="hatchets-art__title">
+                            Премиум аватары
+                        </h2>
+
+                        <div class="hatchets-art__view">
+                            <p class="hatchets-art__description hatchets-text">
+                                Какое-то описание, пример текста в две строчки, какое-то описание, пример текста в две строчки
+                            </p>
+
+                            <div class="hatchets-art__gallery hatchets-art__gallery hatchets-diamond">
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image1.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image2.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image3.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image4.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image5.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image6.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image7.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image8.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image9.png" alt="avatar">
+                                </div>
+                                <div class="hatchets-art__image hatchets-img_box">
+                                    <img src="./src/assets/images/png/framework/premium/image10.png" alt="avatar">
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </section>
+            <section class="hatchets-animate">
+                <div class="hatchets-animate__box hatchets-section_box">
+                    <div class="hatchets-animate__description">
+                        <h2 class="hatchets-animate__heading hatchets-heading hatchets-heading_dot">
+                            Анимирование художественной части
+                        </h2>
+                        <p class="hatchets-animate__text hatchets-text">
+                            Какое-то описание, пример текста в две строчки, какое-то описание, пример текста в две строчки, какое-то описание, пример текста в две строчки
+                        </p>
+                    </div>
+                    <div class="hatchets-animate__gallery">
+                        <div class="hatchets-animate__gif  hatchets-animate__gif_hen hatchets-img_box">
+                            <img src="./src/assets/gif/gif1.gif" alt="gif">
+                        </div>
+                        <div class="hatchets-animate__gif hatchets-animate__gif_woman hatchets-img_box">
+                            <img src="./src/assets/gif/gif2.gif" alt="gif">
+                        </div>
+                        <div class="hatchets-animate__gif hatchets-animate__gif_knight hatchets-img_box">
+                            <img src="./src/assets/gif/gif3.gif" alt="gif">
+                        </div>
+                        <div class="hatchets-animate__gif hatchets-animate__gif_hero hatchets-img_box">
+                            <img src="./src/assets/gif/gif4.gif" alt="gif">
+                        </div>
+                        <div class="hatchets-animate__gif hatchets-animate__gif_pumpkin hatchets-img_box">
+                            <img src="./src/assets/gif/gif5.gif" alt="gif">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hatchets-project">
+                <div class="hatchets-project__box hatchets-section_box">
+                    <h2 class="hatchets-project__heading hatchets-heading hatchets-heading_dot">
+                        какой проект у нас вышел
+                    </h2>
+                </div>
+                <section class="hatchets-project__section hatchets-mobile">
+                    <div class="hatchets-mobile__box hatchets-section_box hatchets-section_box_shorter">
+                        <div class="hatchets-mobile__description">
+                            <h2 class="hatchets-mobile__title hatchets-heading hatchets-heading_dot">
+                                Мобильное приложение
+                            </h2>
+                            <p class="hatchets-mobile__text hatchets-text">
+                                Какое-то описание, пример текста в две строчки,
+                                какое-то описание, пример текста в две строчки
+                            </p>
+                        </div>
+
+                        <div class="hatchets-mobile__cards">
+                            <div class="hatchets-mobile__card">
+                                <div class="hatchets-mobile__name hatchets-text hatchets-checkmark">
+                                    Настройка данных профиля
+                                </div>
+                                <div class="hatchets-mobile__screens">
+                                    <div class="hatchets-mobile__screen hatchets-img_box">
+                                        <img src="./src/assets/images/png/app/Image1.png" alt="screen">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hatchets-mobile__card">
+                                <div class="hatchets-mobile__name hatchets-text hatchets-checkmark">
+                                    Статистика игрока
+                                </div>
+                                <div class="hatchets-mobile__screens">
+                                    <div class="hatchets-mobile__screen hatchets-img_box">
+                                        <img src="./src/assets/images/png/app/Image2.png" alt="screen">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hatchets-mobile__card">
+                                <div class="hatchets-mobile__name hatchets-text hatchets-checkmark">
+                                    История матчей
+                                </div>
+                                <div class="hatchets-mobile__screens">
+                                    <div class="hatchets-mobile__screen hatchets-img_box">
+                                        <img src="./src/assets/images/png/app/Image3.png" alt="screen">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hatchets-mobile__card">
+                                <div class="hatchets-mobile__name hatchets-text hatchets-checkmark">
+                                    Персонализация игроков <br>
+                                    (смена аватара, рамки, анимаций заставок и попаданий)
+                                </div>
+                                <div class="hatchets-mobile__screens">
+                                    <div class="hatchets-mobile__screen hatchets-img_box">
+                                        <img src="./src/assets/images/png/app/Image4.png" alt="screen">
+                                    </div>
+                                    <div class="hatchets-mobile__screen hatchets-img_box">
+                                        <img src="./src/assets/images/png/app/Image5.png" alt="screen">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hatchets-mobile__card">
+                                <div class="hatchets-mobile__name hatchets-text hatchets-checkmark">
+                                    Авторизация игроков на атракционе <br>
+                                    через QR код
+                                </div>
+                                <div class="hatchets-mobile__screens">
+                                    <div class="hatchets-mobile__screen hatchets-img_box">
+                                        <img src="./src/assets/images/png/app/Image6.png" alt="screen">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="hatchets-project__section hatchets-admin">
+                    <div class="hatchets-admin__box hatchets-section_box hatchets-section_box_shorter">
+                        <div class="hatchets-admin__description">
+                            <h2 class="hatchets-admin__title hatchets-heading hatchets-heading_dot">
+                                Сайт администратора
+                            </h2>
+                            <p class="hatchets-admin__text hatchets-text">
+                                Какое-то описание, пример текста в две строчки,
+                                какое-то описание, пример текста в две строчки
+                            </p>
+                        </div>
+                        <div class="hatchets-admin__list">
+                            <div class="hatchets-admin__item hatchets-text hatchets-checkmark">
+                                Управление пользователями
+                            </div>
+                            <div class="hatchets-admin__item hatchets-text hatchets-checkmark">
+                                Управление лицензией
+                            </div>
+                            <div class="hatchets-admin__item hatchets-text hatchets-checkmark">
+                                Интегрирована подписка Paypal
+                            </div>
+                        </div>
+                        <div class="hatchets-admin__admin">
+                            <div class="hatchets-admin__image hatchets-admin__image_statistic hatchets-img_box">
+                                <img src="./src/assets/images/png/project-section/statistic.png" alt="statistic">
+                            </div>
+                            <div class="hatchets-admin__image hatchets-admin__image_data hatchets-img_box">
+                                <img src="./src/assets/images/png/project-section/data.png" alt="data">
+                            </div>
+                            <div class="hatchets-admin__image hatchets-admin__image_laptop hatchets-img_box">
+                                <img src="./src/assets/images/png/project-section/laptop.png" alt="laptop">
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="hatchets-project__section hatchets-projector">
+                    <div class="hatchets-projector__box hatchets-section_box hatchets-section_box_shorter">
+                        <div class="hatchets-projector__description">
+                            <h2 class="hatchets-projector__heading hatchets-heading">
+                                Игра на проекторе
+                            </h2>
+                            <p class="hatchets-projector__text hatchets-text">
+                                Какое-то описание, пример текста в две строчки,
+                                какое-то описание, пример текста в две строчки
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="hatchets-projector__box hatchets-section_box">
+                        <div class="hatchets-projector__data">
+                            <div class="hatchets-projector__image hatchets-img_box">
+                                <img src="./src/assets/images/png/projection.png" alt="projection">
+                            </div>
+                            <div class="hatchets-projector__about">
+                                <div class="hatchets-projector__description">
+                                    <h2 class="hatchets-projector__title hatchets-heading hatchets-checkmark">
+                                        О проекторе Lidar
+                                    </h2>
+                                    <p class="hatchets-projector__text hatchets-text">
+                                        При помощи проектора Lidar игрок Какое-то описание, пример текста в две строчки, какое-то описание, пример текста в две строчки
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="hatchets-look">
+                    <div class="hatchets-look__box hatchets-section_box">
+                        <h2 class="hatchets-look__heading hatchets-heading hatchets-checkmark">
+                            Как это выглядит на практике
+                        </h2>
+                        <div class="hatchets-look__field">
+                            <div class="hatchets-look__video">
+                                <video class="hatchets-look__media" controls>
+                                    <source src="src/assets/video/video1.mp4" type="video/mp4">
+                                    Your browser does not support the hatchets-video tag.
+                                </video>
+                            </div>
+                            <div class="hatchets-look__video">
+                                <video class="hatchets-look__media" controls>
+                                    <source src="src/assets/video/video2.mp4" type="video/mp4">
+                                    Your browser does not support the hatchets-video tag.
+                                </video>
+                            </div>
+                            <div class="hatchets-look__video">
+                                <video class="hatchets-look__media" controls>
+                                    <source src="src/assets/video/video3.mp4" type="video/mp4">
+                                    Your browser does not support the hatchets-video tag.
+                                </video>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </section>
+            <section class="hatchets-technologies">
+                <div class="hatchets-technologies__box hatchets-section_box">
+                    <h2 class="hatchets-technologies__heading hatchets-heading hatchets-heading_dot">
+                        ПРОГРАММЫ И ТЕХНОЛОГИИ
+                    </h2>
+
+                    <div class="hatchets-technologies__programs">
+                        <div class="hatchets-technologies__image">
+                            <img src="./src/assets/images/png/programs/image1.png" alt="logo">
+                        </div>
+                        <div class="hatchets-technologies__image">
+                            <img src="./src/assets/images/png/programs/image2.png" alt="logo">
+                        </div>
+                        <div class="hatchets-technologies__image">
+                            <img src="./src/assets/images/png/programs/image3.png" alt="logo">
+                        </div>
+                        <div class="hatchets-technologies__image">
+                            <img src="./src/assets/images/png/programs/image4.png" alt="logo">
+                        </div>
+                        <div class="hatchets-technologies__image">
+                            <img src="./src/assets/images/png/programs/image5.png" alt="logo">
+                        </div>
+                        <div class="hatchets-technologies__image">
+                            <img src="./src/assets/images/png/programs/image6.png" alt="logo">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hatchets-teem">
+                <div class="hatchets-teem__box hatchets-section_box">
+                    <h2 class="hatchets-teem__heading hatchets-heading hatchets-heading_dot">
+                        наша команда
+                    </h2>
+
+                    <div class="hatchets-teem__gallery">
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image1.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Дарья Танчук
+                            </div>
+                            <div class="hatchets-teem__position">
+                                художник
+                            </div>
+                        </div>
+
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image2.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Денис Жданов
+                            </div>
+                            <div class="hatchets-teem__position">
+                                Unity developer
+                            </div>
+                        </div>
+
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image3.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Алина Иванова
+                            </div>
+                            <div class="hatchets-teem__position">
+                                художник аниматор
+                            </div>
+                        </div>
+
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image4.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Дмитрий Зубаиров
+                            </div>
+                            <div class="hatchets-teem__position">
+                                Unity developer
+                            </div>
+                        </div>
+
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image5.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Элеонора Подковаева
+                            </div>
+                            <div class="hatchets-teem__position">
+                                Аудитор проекта
+                            </div>
+                        </div>
+
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image6.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Беляков Павел
+                            </div>
+                            <div class="hatchets-teem__position">
+                                Проектный менеджер
+                            </div>
+                        </div>
+
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image7.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Андрей Видякин
+                            </div>
+                            <div class="hatchets-teem__position">
+                                UX/UI Дизайнер
+                            </div>
+                        </div>
+
+                        <div class="hatchets-teem__card">
+                            <div class="hatchets-teem__image hatchets-img_box">
+                                <img src="./src/assets/images/png/teem/image8.png" alt="photo">
+                            </div>
+                            <div class="hatchets-teem__name">
+                                Муркович Богдан
+                            </div>
+                            <div class="hatchets-teem__position">
+                                Laravel разработчик
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="hatchets-reviews">
+                <div class="hatchets-reviews__box hatchets-section_box">
+                    <h2 class="hatchets-reviews__heading hatchets-heading hatchets-heading_dot">
+                        ОТЗЫВ ЗАКАЗЧИКА
+                    </h2>
+                    <p class="hatchets-reviews__text hatchets-text">
+                        Сотрудничество АНО «БЕЛЫЙ МАЯК» с компанией «АРРРОХ» началось в апреле 2019 года. Необходимо было в сжатые сроки создать мультипликационный материал и игровое мобильное приложение. За время работы сотрудники компании показали высокий профессионализм, постоянное стремление к конструктивному диалогу, оптимизации временных и материальных затрат.
+                        Отдельную благодарность хотели бы выразить руководителю компании Богаткину Вячеславу Владимировичу за активное участие в рабочем процессе, личную открытость и инициативу. Безусловно, при таком уровне выстроенного взаимодействия наше сотрудничество будет продолжено и при реализации следующих проектов.
+                    </p>
+                </div>
+            </section>
+        </main>
+        <footer class="hatchets-footer">
+            <div class="hatchets-footer__box hatchets-section_box">
+                <h2 class="hatchets-footer__heading hatchets-heading hatchets-heading_dot">
+                    Реализуем Вашу любую идею в реальность
+                </h2>
+                <p class="hatchets-footer__text hatchets-text">
+                    Расскажите, пожалуйста, о целях, задачах, сроках и бюджете проекта, как можно подробнее.
+                    Техническое задание на разработку (хотя бы в общем виде) поможет нам разобраться в проекте
+                    и сделать вам предложение намного быстрее.
+                </p>
+                <div class="hatchets-footer__contacts">
+                    <a href="mailto:info@appfox.ru" class="hatchets-footer__link">
+                        <div class="hatchets-footer__icon hatchets-img_box">
+                            <img src="./src/assets/images/svg/email.svg" alt="Email">
+                        </div>
+                        <span class="hatchets-footer__data">
+                            info@appfox.ru
+                        </span>
+                    </a>
+                    <a href="tel:8 (800) 551-30-75" class="hatchets-footer__link">
+                        <div class="hatchets-footer__icon hatchets-img_box">
+                            <img src="./src/assets/images/svg/phone.svg" alt="phone">
+                        </div>
+                        <span class="hatchets-footer__data">
+                            8 (800) 551-30-75
+                        </span>
+                    </a>
+                </div>
+                <button class="hatchets-footer__button hatchets-button">
+                    <span class="hatchets-button__text">
+                        Оставить заявку
+                    </span>
+                </button>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
